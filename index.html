@@ -5,28 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>조은솔 | Cloud &amp; Infrastructure Engineer</title>
 <meta name="description" content="조은솔 — 클라우드/보안/네트워크 인프라 엔지니어 포트폴리오. Linux, AWS, Docker, Kubernetes, Python 기반 인프라 자동화 및 보안 점검 프로젝트.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230b0d10'/%3E%3Cpath d='M12 3l7 3v5c0 4.6-3 8.2-7 10-4-1.8-7-5.4-7-10V6z' fill='none' stroke='%2334e7a5' stroke-width='1.6'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23ffffff'/%3E%3Cpath d='M12 3l7 3v5c0 4.6-3 8.2-7 10-4-1.8-7-5.4-7-10V6z' fill='none' stroke='%23111214' stroke-width='1.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
   :root{
-    --bg:#0b0d10;
-    --bg-soft:#0f1216;
-    --surface:#14171b;
-    --surface-2:#191d22;
-    --border:#242930;
-    --text:#e9ebee;
-    --muted:#9aa2ac;
-    --muted-2:#6b7280;
-    --accent:#34e7a5;
-    --accent-dim:#1c8f66;
-    --accent-ink:#04140d;
-    --blue:#7ea6ff;
-    --amber:#f2c46d;
+    --bg:#ffffff;
+    --bg-soft:#f7f7f5;
+    --surface:#f2f2f0;
+    --surface-2:#e9e9e6;
+    --border:#e2e2de;
+    --text:#121316;
+    --muted:#63666c;
+    --muted-2:#8d9096;
+    --ink:#111214;
+    --ink-2:#1d1f22;
+    --on-ink:#f4f4f2;
+    --on-ink-muted:#9a9da2;
+    --accent:#059669;
+    --accent-dim:#0b7a54;
+    --accent-ink:#ffffff;
+    --blue:#3b5bdb;
+    --amber:#b45309;
     --danger:#ff8a80;
     --radius:16px;
     --radius-sm:10px;
     --maxw:1120px;
     --mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
-    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, "Malgun Gothic", Roboto, Helvetica, Arial, sans-serif;
+    --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", Roboto, Helvetica, Arial, sans-serif;
   }
 
   *{box-sizing:border-box;}
@@ -41,7 +47,7 @@
     text-rendering:optimizeLegibility;
     overflow-x:hidden;
   }
-  ::selection{background:var(--accent); color:var(--accent-ink);}
+  ::selection{background:var(--ink); color:#fff;}
 
   a{color:inherit; text-decoration:none;}
   img{max-width:100%; display:block;}
@@ -70,7 +76,7 @@
     width:7px; height:7px;
     border-radius:50%;
     background:var(--accent);
-    box-shadow:0 0 0 3px rgba(52,231,165,.18);
+    box-shadow:0 0 0 3px rgba(5,150,105,.18);
   }
 
   .section-head{
@@ -97,7 +103,7 @@
     top:0; left:0; right:0;
     z-index:100;
     backdrop-filter:saturate(160%) blur(14px);
-    background:rgba(11,13,16,.72);
+    background:rgba(255,255,255,.78);
     border-bottom:1px solid var(--border);
   }
   .nav-inner{
@@ -143,13 +149,13 @@
     white-space:nowrap;
   }
   .btn-primary{
-    background:var(--accent);
-    color:var(--accent-ink);
-    border-color:var(--accent);
+    background:var(--ink);
+    color:#fff;
+    border-color:var(--ink);
   }
-  .btn-primary:hover{transform:translateY(-2px); background:#4ff0b4;}
+  .btn-primary:hover{transform:translateY(-2px); background:#000;}
   .btn-ghost{color:var(--text);}
-  .btn-ghost:hover{border-color:var(--muted-2); transform:translateY(-2px);}
+  .btn-ghost:hover{border-color:var(--muted-2); background:var(--surface); transform:translateY(-2px);}
 
   .nav-toggle{
     display:none;
@@ -286,13 +292,13 @@
     width:8px; height:8px;
     border-radius:50%;
     background:var(--accent);
-    box-shadow:0 0 0 0 rgba(52,231,165,.6);
+    box-shadow:0 0 0 0 rgba(5,150,105,.6);
     animation:pulse 2s infinite;
   }
   @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(52,231,165,.5);}
-    70%{box-shadow:0 0 0 8px rgba(52,231,165,0);}
-    100%{box-shadow:0 0 0 0 rgba(52,231,165,0);}
+    0%{box-shadow:0 0 0 0 rgba(5,150,105,.5);}
+    70%{box-shadow:0 0 0 8px rgba(5,150,105,0);}
+    100%{box-shadow:0 0 0 0 rgba(5,150,105,0);}
   }
   .divider{height:1px; background:var(--border); margin:18px 0;}
   .fact-list{display:flex; flex-direction:column; gap:11px;}
@@ -334,12 +340,24 @@
   }
   .about-grid p strong{color:var(--text); font-weight:600;}
   .quote-block{
-    border-left:2px solid var(--accent);
-    padding:4px 0 4px 20px;
-    font-size:17px;
-    color:var(--text);
+    background:var(--ink);
+    color:var(--on-ink);
+    border-radius:var(--radius);
+    padding:26px 28px;
+    font-size:18px;
+    line-height:1.55;
     margin:26px 0;
-    font-weight:500;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .quote-block::before{
+    content:"“";
+    display:block;
+    font-size:34px;
+    color:#34d399;
+    line-height:1;
+    margin-bottom:6px;
+    font-weight:700;
   }
   .principle-card{
     border:1px solid var(--border);
@@ -397,7 +415,7 @@
   .skill-icon{
     width:38px; height:38px;
     border-radius:10px;
-    background:rgba(52,231,165,.1);
+    background:rgba(5,150,105,.1);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -433,8 +451,8 @@
     font-family:var(--mono);
     font-size:11.5px;
     color:var(--blue);
-    background:rgba(126,166,255,.1);
-    border:1px solid rgba(126,166,255,.25);
+    background:rgba(59,91,219,.08);
+    border:1px solid rgba(59,91,219,.22);
     padding:5px 10px;
     border-radius:6px;
   }
@@ -558,8 +576,8 @@
     font-size:10.5px;
     font-family:var(--mono);
     color:var(--amber);
-    border:1px solid rgba(242,196,109,.3);
-    background:rgba(242,196,109,.08);
+    border:1px solid rgba(180,83,9,.25);
+    background:rgba(180,83,9,.08);
     padding:2px 8px;
     border-radius:5px;
   }
@@ -568,7 +586,7 @@
   #contact{padding:80px 0 60px;}
   .contact-card{
     border:1px solid var(--border);
-    background:linear-gradient(160deg, var(--surface), var(--bg-soft));
+    background:var(--surface);
     border-radius:var(--radius);
     padding:clamp(28px, 5vw, 54px);
     display:grid;
@@ -583,22 +601,30 @@
     margin-bottom:16px;
   }
   .contact-card p{color:var(--muted); font-size:15px; max-width:48ch;}
-  .contact-links{display:flex; flex-direction:column; gap:12px;}
+  .contact-links{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    background:var(--ink);
+    border-radius:var(--radius);
+    padding:20px;
+  }
   .contact-link{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:14px 18px;
-    border:1px solid var(--border);
+    padding:14px 16px;
+    border:1px solid #2a2d31;
     border-radius:12px;
-    background:var(--bg-soft);
+    background:var(--ink-2);
     font-size:14px;
+    color:var(--on-ink);
     transition:border-color .2s ease, transform .2s ease;
   }
-  .contact-link:hover{border-color:var(--accent-dim); transform:translateX(3px);}
-  .contact-link .k{color:var(--muted); font-family:var(--mono); font-size:11.5px; text-transform:uppercase;}
+  .contact-link:hover{border-color:#3a3e44; transform:translateX(3px);}
+  .contact-link .k{color:var(--on-ink-muted); font-family:var(--mono); font-size:11.5px; text-transform:uppercase;}
   .contact-link .v{font-weight:600;}
-  .contact-link svg{width:15px; height:15px; stroke:var(--muted);}
+  .contact-link svg{width:15px; height:15px; stroke:var(--on-ink-muted);}
 
   footer{
     padding:26px 0 40px;
@@ -939,10 +965,7 @@
           <div><b>3</b>공통 점검 함수</div>
           <div><b>1↦N</b>원격 서버 자동 점검</div>
         </div>
-        <a class="btn btn-ghost" href="https://github.com/haydenCho" target="_blank" rel="noopener">
-          <svg width="15" height="15" viewBox="0 0 24 24" stroke-width="1.6" stroke="currentColor" fill="none"><path d="M4 4h16v16H4z" style="display:none"/></svg>
-          GitHub에서 코드 보기
-        </a>
+        <a class="btn btn-ghost" href="https://github.com/haydenCho" target="_blank" rel="noopener">GitHub에서 코드 보기</a>
       </div>
     </div>
   </section>
